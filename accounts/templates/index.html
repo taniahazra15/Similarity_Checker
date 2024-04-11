@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background: rgb(1, 1, 40);
+            
+        }
+        .menu{
+            flex:1;
+            padding: 2% 6%;
+            text-align:right;
+            position:fixed;
+            top:0;
+            width:100%;
+            background: #ceb6f4;
+            background: rgb(1, 1, 40);
+
+            
+        }
+        .menu ul{
+            margin:0;
+            padding:0;
+            position:relative;
+            background: rgb(1, 1, 40);
+
+        }
+        .menu ul li{
+            display:inline-block;
+            text-align:right;
+            padding: 12px 20px;
+            position:relative;
+        }
+        .menu ul li a{
+            color:rgb(236, 236, 236);
+            text-decoration: none;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:30px;
+            transition: 1s;
+            font-size:25px;
+        }
+        .menu ul li a:hover{
+            color:rgb(74, 248, 207);
+        }
+        nav{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:auto;
+        }
+        .div1,.div2,.div3,.ser{
+            font-family: Arial, Helvetica, sans-serif;
+            width:80%;
+            overflow: hidden;
+            margin: auto;
+            padding:20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            /*border-radius: 20px;*/
+            margin-top:10%; 
+            /* background-color: white; */
+        }
+        .full-box{
+            width:100%;
+            overflow:hidden;
+            margin-right:30px;
+            /* background: rgb(245, 43, 43);
+            height: 1000px; */
+        }
+        .btn1{
+            margin:5%;
+            margin-left:40%;
+            padding:20px;
+            font-size: 28px;
+            color:aliceblue;
+            transition: 2s;
+        }
+        .btn1 a{
+            text-decoration: none;
+            color:aliceblue;
+            transition: 2s;
+        }
+        .btn1 a:hover{
+            color: blue;
+            background-color: aliceblue;
+            
+        }
+        .btn1:hover{
+            color: blue;
+            background-color: aliceblue;
+            border-radius: 10%;
+        }
+        .menu ul ul{
+          position: absolute;
+          text-align: left;
+          top:0%;
+          left:0;
+          background:rgb(1, 1, 40);
+          display:none;
+          height: 100px;
+          z-index: 10;
+        }
+        .menu ul ul li{
+          width: 300px;
+          
+        }
+        .menu ul li:hover ul{
+          display:block;
+          
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="full-box">
+        <nav class="menu">
+            <ul>
+                <li><a href="/ /">Home</a></li>
+                <li><a href="/contact/">Contact With Us</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="#">Login/SignUp</a>
+                    <ul class="menu1">
+                        <li ><a href="/login_admin/">Admin Login</a></li>
+                        <li ><a href="/register_admin/">Admin Sign Up</a></li>
+                        <li ><a href="/login_student/">Student Login</a></li>
+                        <li ><a href="/register_student/">Student Sign Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="div1">
+            <h1 style="color: blue; text-align: center;margin-bottom: 2%;font-size: 50px;">Similarity Checker</h1>
+            <p style="color: rgb(250, 246, 246);font-size: 30px;">Each day the world's largest business and educational institutions-along with millions of students-trust our exclusive AI-powered text analysis to identify potential plagiarism and paraphrasing across nearly every language,detect AI generated content,verify ownership, and empower error-free writing.</p>
+        </div>
+        <div class="ser">
+            <h1 style="color: blue; text-align: center;margin-bottom: 2%;font-size: 50px;">Find Out What's in your copy</h1>
+            <p style="color: rgb(250, 246, 246);text-align: center; font-size: 30px;">Get started with Similarity Checker for free today!</p>
+            <button class="btn1" ><a href="service.html">Try It Now</a></button>
+        </div>
+        <div class="div2">
+            <h1 style="color: blue;text-align: center;margin-bottom: 2%;font-size: 50px;">How does Similarity Checker Work?</h1>
+            <p style="color: rgb(250, 246, 246);font-size: 30px;">
+                The Similarity Checker can detect all types of plagiarism using Machine Learning Algorithm. Once you have created an account,it's easy to upload document and use the tool to check for plagiarism.Once your document is scanned,you can compare your text against your classmate and your teacher's answer to ensure your document is plagiarism free or minimum plagiarism is present.
+                This will show the identified similar text and the similarity percentage.
+            </p>
+        </div>
+        <div class="div3">
+            <h1 style="color: blue;text-align: center;margin-bottom: 2%;font-size: 50px;">Importance of a Reliable Similarity Checker</h1>
+            <p style="color: rgb(250, 246, 246);font-size: 30px;">A similarity checker gives the final approval that your content or student's work is entirely original.This is incredibly important in today's society,where many people forget to check for plagiarism when writing essays or producing online content.Whether the content will be read by two people or two million people,checking for plagiarism against multiple sources is crucial.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            background-color: rgb(1,1,40);
+            /* flex:1; */
+            padding: 2% 6%;
+            text-align:right;
+            position:fixed;
+            top:0;
+            width:100%;
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:auto;
+        }
+        .menu ul li a{
+            color:rgb(236, 236, 236);
+            text-decoration: none;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:30px;
+            transition: 1s;
+            font-size:25px;
+        }
+        .menu ul li{
+            display: inline-block;
+            padding: 12px 20px;
+            position:relative;
+        }
+        .menu ul li a:hover{
+            color:rgb(74, 248, 207);
+        }
+        .menu ul ul{
+          position: absolute;
+          text-align: left;
+          top:0%;
+          left:0;
+          background:rgb(1, 1, 40);
+          display:none;
+          height: auto;
+          z-index: 10;
+        }
+        .menu ul ul li{
+          width: 300px;
+          
+        }
+        .menu ul li:hover ul{
+          display:block;
+          
+        }
+        .mainpart{
+            width: 80%;
+            margin: auto;
+            margin-top: 20%;
+            background-color: rgb(245, 206, 238);
+            border-radius: 10%;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact/">Contact With Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Login/SignUp</a>
+                    <ul class="menu1">
+                        <li ><a href="/login_admin/">Admin Login</a></li>
+                        <li ><a href="/register_admin/">Admin Sign Up</a></li>
+                        <li ><a href="/login_student/">Student Login</a></li>
+                        <li ><a href="/register_student/">Student Sign Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="mainpart">
+            <h1 style="color:rgb(130, 44, 235);margin-left:30%;padding-top: 2%;">Our Key Highlights</h1>
+            <h2 style="margin-left: 20%;color: rgb(141, 23, 244);margin-top: 2%;">Similarity Checking</h2>
+            <p style="margin-left: 20%;padding-bottom: 2%;">Our main goal is to check plagiarism between assignments and generate plagiarism report. </p>
+            
+        </div>
+    </div>
+</body>
+</html>

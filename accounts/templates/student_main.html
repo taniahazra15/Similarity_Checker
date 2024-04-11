@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <style>
+        .menu{
+            background-color: rgb(1,1,40);
+            /* flex:1; */
+            padding: 2% 6%;
+            text-align:right;
+            position:fixed;
+            top:0;
+            width:100%;
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:auto;
+        }
+        .menu ul li a{
+            color:rgb(236, 236, 236);
+            text-decoration: none;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:30px;
+            transition: 1s;
+            font-size:25px;
+        }
+        .menu ul li{
+            display: inline-block;
+            padding: 12px 20px;
+            position:relative;
+        }
+        .menu ul li a:hover{
+            color:rgb(74, 248, 207);
+        }
+        .menu ul ul{
+          position: absolute;
+          text-align: left;
+          top:0%;
+          left:0;
+          background:rgb(1, 1, 40);
+          display:none;
+          height: auto;
+          z-index: 10;
+        }
+        .menu ul ul li{
+          width: 300px;
+          
+        }
+        .menu ul li:hover ul{
+          display:block;
+          
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            box-sizing: border-box;
+            margin-right: 5%;
+        }
+        .course-list{
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            box-sizing: border-box;
+            margin-right: 5%;
+        }
+        .course-list a{
+            text-decoration: none;
+            color: black;
+            font-size: 100%;
+        }
+
+        h1 {
+            color: #3498db;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        .main{
+            width: 90%;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact/">Contact With Us</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/student_home/">Join Class</a></li>
+            <!-- <li><a href="/service_student/">Add Assignment</a></li> -->
+            <li><a href="/logout_User/"><button style="background-color: rgb(146, 141, 242); font-size: 20px;border-radius: 2px;padding: 2px;" type="submit">Logout</button></a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h1>Join Class</h1>
+            <form action="#" method="post"enctype="multipart/form-data">
+                {% csrf_token %}
+                {% if messages %}
+                {{ message.tags }}
+                <div class="alert alert-primary" role="alert">
+                    {% for message in messages %}
+                    {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <label for="Name" ><b>Class Name</b></label>
+                <input type="text" placeholder="Enter name of the Class" name="username">
+                <label for="Class-code"><b>Class Code</b></label>
+                <input type="text" placeholder="Enter your class Code" name="classcode">
+                
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <!-- <p style="margin-left: .9%;">Back to Student Pannel <a href="/service_admin/">Student Pannel</a></p> -->
+                <button type="submit">Add Class</button>
+            </form>
+        </div>
+        <!-- {{queryset}} -->
+        <div class="course-list">
+            <h1>Class List</h1>
+            <ul>
+                {% for course in querysett %}
+                <a href="/Search_classname_student/"><li><b>{{ course.username }}  </b> </li></a>
+                {% endfor %} 
+            
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

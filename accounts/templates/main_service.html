@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service_For_Student</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            /* background-color: bisque; */
+        }
+        /* form{
+
+        } */
+        .menu{
+            flex:1;
+            padding: 2% 6%;
+            text-align:right;
+            position:fixed;
+            top:0;
+            width:100%;
+            background: #ceb6f4;
+            background: rgb(1, 1, 40);
+
+            
+        }
+        .menu ul{
+            margin:0;
+            padding:0;
+            position:relative;
+            background: rgb(1, 1, 40);
+
+        }
+        .menu ul li{
+            display:inline-block;
+            text-align:right;
+            padding: 12px 20px;
+            position:relative;
+        }
+        .menu ul li a{
+            color:rgb(236, 236, 236);
+            text-decoration: none;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:30px;
+            transition: 1s;
+            font-size:25px;
+        }
+        .menu ul li a:hover{
+            color:rgb(74, 248, 207);
+        }
+        nav{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:auto;
+        }
+        .menu ul ul{
+          position: absolute;
+          text-align: left;
+          top:0%;
+          left:0;
+          background:rgb(1, 1, 40);
+          display:none;
+          height: 100px;
+          z-index: 10;
+        }
+        .menu ul ul li{
+          width: 300px;
+          
+        }
+        .menu ul li:hover ul{
+          display:block;
+          
+        }
+        h1{
+            color: rgb(177, 118, 249);
+            text-align: center;
+            font-size: 50px;
+            margin-top: 12%;
+        }
+        .main{
+            width:80%;
+            display:flex;
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+        .first, .second{
+            width:40%;
+            margin-right: 5%;
+            
+        }
+        h2{
+            text-align: center;
+            color: blue;
+        }
+        .first-1
+        {
+            background-color: rgb(206, 238, 236);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact/">Contact With Us</a></li>
+            <li><a href="/service_student/">Services</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/logout_User/"><button style="background-color: beige; font-size: 20px;border-radius: 2px;padding: 2px;" type="submit">Logout</button></a></li>
+        </ul>
+    </nav>
+    <h1>Which Services we provide</h1>
+    <form action="#"method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="main">
+            <div class="first">
+                <div><h2>Submit Assignment</h2></div>
+                <div class="first-1">
+                    <input type="file" style="font-size: 20px; margin:9.3%;" name="assignment">
+                </div>
+                <div><button type="submit" style="font-size: 20px;color: rgb(62, 244, 25);margin-left: 40%;margin-top: 5%;">Submit</button></div>
+            </div>
+            <div class="second">
+                <div><h2>Check Similarity</h2></div>
+                <div class="first-1">
+                    <button style="font-size: 20px;margin:9.3%;">Check Similarity</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    
+    
+</body>
+</html>

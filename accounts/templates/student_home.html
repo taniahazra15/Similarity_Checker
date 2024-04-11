@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service_For_Student</title>
+    <style>
+          *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            /* background-color: bisque; */
+        }
+        .menu{
+            flex:1;
+            padding: 2% 6%;
+            text-align:right;
+            position:fixed;
+            top:0;
+            width:100%;
+            background: #ceb6f4;
+            background: rgb(1, 1, 40);
+
+            
+        }
+        .menu ul{
+            margin:0;
+            padding:0;
+            position:relative;
+            background: rgb(1, 1, 40);
+
+        }
+        .menu ul li{
+            display:inline-block;
+            text-align:right;
+            padding: 12px 20px;
+            position:relative;
+        }
+        .menu ul li a{
+            color:rgb(236, 236, 236);
+            text-decoration: none;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:30px;
+            transition: 1s;
+            font-size:25px;
+        }
+        .menu ul li a:hover{
+            color:rgb(74, 248, 207);
+        }
+        nav{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:auto;
+        }
+        .menu ul ul{
+          position: absolute;
+          text-align: left;
+          top:0%;
+          left:0;
+          background:rgb(1, 1, 40);
+          display:none;
+          height: 100px;
+          z-index: 10;
+        }
+        .menu ul ul li{
+          width: 300px;
+          
+        }
+        .menu ul li:hover ul{
+          display:block;
+          
+        }
+        h1{
+            color: rgb(131, 201, 239);
+            text-align: center;
+            font-size: 50px;
+            margin-top: 12%;
+        }
+        .main{
+            width:80%;
+            display:flex;
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+        .course{
+            width:auto;
+            margin-right:5%;
+            background-color: aquamarine;
+            padding: 2%;
+            border-radius: 5%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        .course a{
+            text-decoration: none;
+
+        }
+        h2{
+            text-align: center;
+            color: rgb(107, 34, 252);
+            margin-top: 2%;
+        }
+        .contain{
+            width:60%;
+            border-radius: 5%;
+            background-color: rgb(215, 181, 247);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact/">Contact With Us</a></li>
+            <li><a href="/student_home/">Join Class</a></li>
+            
+            <!-- <li><a href="/service_student/">Add Assignment</a></li> -->
+            <li><a href="/about/">About Us</a></li>
+            
+            <li><a href="/logout_Admin/"><button style="background-color: beige; font-size: 20px;border-radius: 2px;padding: 2px;" type="submit">Logout</button></a></li>
+        </ul>
+    </nav>
+    
+    <h1>Welcome to our Student Pannel</h1>
+    <div class="main">
+            <div class="course">
+                <a href="/student_pannel/"><h2>+ Join Class</h2></a>
+            </div>
+            <div class="contain">
+                <h2>As a Student What you can do</h2>
+                <p style="margin: 3%;">As a Student you can join classes,  you can add assignment, you can add check similarity between assignment.</p>
+            </div>
+    </div>
+    
+   
+    
+</body>
+</html>
